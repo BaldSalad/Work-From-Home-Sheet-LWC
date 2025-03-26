@@ -1,0 +1,153 @@
+<template>
+
+    <template if:true={users}>
+        <table class=" styled-table  slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr>
+                    <th >{weekStartFormatted} - {weekEndFormatted}</th>
+                    <th class="slds-text-title_bold">Monday</th>
+                    <th class="slds-text-title_bold">Tuesday</th>
+                    <th class="slds-text-title_bold">Wednesday</th>
+                    <th class="slds-text-title_bold">Thursday</th>
+                    <th class="slds-text-title_bold">Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={usersWithClasses} for:item="user">
+                    <tr key={user.Id}>
+                        <td><img src={user.SmallPhotoUrl} alt="Small Photo" /> </td>
+                        
+                        <td class={user.dayClasses.DaysInOffice__c}>
+                            <lightning-combobox
+                                data-user-id={user.Id}
+                                data-day-field="DaysInOffice__c"
+                                value={user.DaysInOffice__c}
+                                options={dayOptions}
+                                onchange={handleChange}>
+                            </lightning-combobox>
+                        </td>
+
+                        <td class={user.dayClasses.DaysInOffice2__c}>
+                            <lightning-combobox
+                                data-user-id={user.Id}
+                                data-day-field="DaysInOffice2__c"
+                                value={user.DaysInOffice2__c}
+                                options={dayOptions}
+                                onchange={handleChange}>
+                            </lightning-combobox>
+                        </td>
+                        <td class={user.dayClasses.DaysInOffice3__c} >
+                            <lightning-combobox
+                                data-user-id={user.Id}
+                                data-day-field="DaysInOffice3__c"
+                                value={user.DaysInOffice3__c}
+                                options={dayOptions}
+                                onchange={handleChange}>
+                            </lightning-combobox>
+                        </td>
+                        <td class={user.dayClasses.DaysInOffice4__c}>
+                            <lightning-combobox
+                                data-user-id={user.Id}
+                                data-day-field="DaysInOffice4__c"
+                                value={user.DaysInOffice4__c}
+                                options={dayOptions}
+                                onchange={handleChange}>
+                            </lightning-combobox>
+                        </td>
+                        <td class={user.dayClasses.DaysInOffice5__c}>
+                            <lightning-combobox
+                                data-user-id={user.Id}
+                                data-day-field="DaysInOffice5__c"
+                                value={user.DaysInOffice5__c}
+                                options={dayOptions}
+                                onchange={handleChange}>
+                            </lightning-combobox>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+
+        <br>
+        
+        <table class=" styled-table  slds-table_bordered slds-table_cell-buffer">
+
+            <thead>
+                <tr>
+                    <th> {weekStartNextFormatted} - {weekEndNextFormatted}</th>
+                    <th class="slds-text-title_bold">Monday</th>
+                    <th class="slds-text-title_bold">Tuesday</th>
+                    <th class="slds-text-title_bold">Wednesday</th>
+                    <th class="slds-text-title_bold">Thursday</th>
+                    <th class="slds-text-title_bold">Friday</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <template for:each={usersWithClasses} for:item="user">
+                    <tr key={user.Id} class={cellClasses} >
+                        <td><img src={user.SmallPhotoUrl} alt="Small Photo" /> </td>
+                        <td class={user.dayClasses.DaysInOfficeW2__c}>
+                            <lightning-combobox
+                                data-user-id={user.Id}
+                                data-day-field="DaysInOfficeW2__c"
+                                value={user.DaysInOfficeW2__c}
+                                options={dayOptions}
+                                onchange={handleChange}>
+                            </lightning-combobox>
+                            
+
+                        </td>
+                        <td class={user.dayClasses.DaysInOffice2w2__c}>
+                            <lightning-combobox
+                                data-user-id={user.Id}
+                                data-day-field="DaysInOffice2w2__c"
+                                value={user.DaysInOffice2w2__c}
+                                options={dayOptions}
+                                onchange={handleChange}>
+                            </lightning-combobox>
+                        </td>
+                        <td class={user.dayClasses.DaysInOffice3w2__c}>
+                            <lightning-combobox
+                                data-user-id={user.Id}
+                                data-day-field="DaysInOffice3w2__c"
+                                value={user.DaysInOffice3w2__c}
+                                options={dayOptions}
+                                onchange={handleChange}>
+                            </lightning-combobox>
+                        </td>
+                        <td class={user.dayClasses.DaysInOffice4w2__c}>
+                            <lightning-combobox
+                                data-user-id={user.Id}
+                                data-day-field="DaysInOffice4w2__c"
+                                value={user.DaysInOffice4w2__c}
+                                options={dayOptions}
+                                onchange={handleChange}>
+                            </lightning-combobox>
+                        </td>
+                        <td class={user.dayClasses.DaysInOffice5w2__c}>
+                            <lightning-combobox
+                                data-user-id={user.Id}
+                                data-day-field="DaysInOffice5w2__c"
+                                value={user.DaysInOffice5w2__c}
+                                options={dayOptions}
+                                onchange={handleChange}>
+                            </lightning-combobox>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+
+        <br>
+
+        <!-- Save button -->
+        <lightning-button label="Save Changes" variant="brand" onclick={handleSave} class="save-button"></lightning-button>
+    </template>
+
+    <template if:false={users}>
+        <p>Loading data...</p>
+    </template>
+
+
+</template>
