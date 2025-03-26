@@ -20,9 +20,6 @@ public with sharing class ScheduleController {
                 SmallPhotoUrl
             FROM User 
             WHERE IsActive = true
-            AND Profile.Name = 'System Administrator'
-            AND FirstName != 'SAM'
-            AND LastName != 'SAM'
         ];
     }
 
