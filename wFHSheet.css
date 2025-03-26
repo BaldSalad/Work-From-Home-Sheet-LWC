@@ -1,0 +1,112 @@
+.header-title {
+  font-size: 1.5rem;
+  color: #004b7f;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.styled-table thead tr {
+  background-color: #004b7f;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #e9f1f7;
+}
+
+.save-button {
+  display: inline-block; 
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: auto; 
+  text-align: left; 
+}
+
+.row-class.even-row {
+  background-color: #f9f9f9;
+}
+
+.row-class.odd-row {
+  background-color: #ffffff;
+}
+
+.row-class:hover {
+  background-color: #e6f7ff;
+}
+
+
+th {
+  font-family: 'Arial', sans-serif; 
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
+}
+
+
+th.date-header {
+  font-weight: bold;
+  color: #004b7f; 
+  font-size: 1.4rem;
+}
+
+
+th.weekday {
+  font-weight: normal;
+  color: #333; 
+  font-size: 1.2rem;
+  padding: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  max-width: 200px;
+} 
+.office {
+  background-color: orange;
+  max-width: 200px;
+  border: 1px solid orange;
+}
+.wfh {
+  background-color: rgb(124, 233, 124);
+  max-width: 200px;
+  border: 1px solid rgb(124, 233, 124);
+}
+.annual-leave {
+  background-color: grey;
+  max-width: 200px;
+  border: 1px solid grey;
+}
+.event {
+  background-color: salmon;
+  max-width: 200px;
+  border: 1px solid salmon;
+}
